@@ -1,34 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+This is a React with [Next.js](https://nextjs.org) project developed during Rocketseat's NLW Connect in 2025.
 
 ## Getting Started
 
-First, run the development server:
+### Prepare development environment:
+
+-  Install node version manager
+-  Install nodejs version 22
+-  Install VS Code
+
+settings.json:
+-  terminal.integrated.fontSize: 14
+-  explorer.compactFolders: false
+
+### Install VS Code extensions:
+-  Tailwind CSS IntelliSense
+-  Omni Theme
+-  Symbols
+-  PostCSS Language Support
+-  Biome
+
+### Create and run [Next.js](https://nextjs.org/docs/app/getting-started/installation) project:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+-  npx  create-next-app@latest  --empty
+-  npm  run  dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Set up [Tailwind](https://tailwindcss.com/docs/installation/framework-guides/nextjs) CSS:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Install TailWind
+```bash
+npm  install  tailwindcss  @tailwindcss/postcss  postcss
+```
+-  Create a  postcss.config.mjs file in the root of your project and add the @tailwindcss/postcss plugin to your PostCSS configuration.
+-  Add an @import to ./src/app/globals.css that imports Tailwind  CSS
+-  Import './globals.css' in the layout.tsx file.
 
-## Learn More
+### Set up [Biome](https://biomejs.dev/guides/getting-started/):
+ - Install Biome
+```bash
+ # install as development dependency
+npm  install  @biomejs/biome -D
+npx  @biomejs/biome  init
+```
+ - Open Workspace Setting (Json)
+    - Enable Biome for languages javascript, typescript and typescriptreact by adding:
+	   - "editor.defaultFormatter":  "biomejs.biome"
+	- Enable  fix  on  save  by  adding:
+	   -  "source.fixAll.biome":  "explicit"
+	   - "source.organizeImports.biome":  "explicit"
+	-  Enable  format  on  save  by  adding:
+		- "editor.formatOnSave":  true
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Install other packages:
+ - Install [Lucide Icons](https://lucide.dev/icons/) (Icon toolkit)
+ ```bash
+npm install lucide-react
+```
+ - Install [Tailwind Merge](https://www.npmjs.com/package/tailwind-merge) (Tailwind class merger)
+ ```bash
+npm install tailwind-merge 
+```
+ - Install [React Hook Form](https://www.react-hook-form.com/) (Form management library)
+ ```bash
+npm install react-hook-form
+```
+ - Install [Zod](https://zod.dev/) with Hook Form integration (Schema validation library)
+ ```bash
+npm install zod @hookform/resolvers
+```
+ - Install [Orval](https://orval.dev/overview) (API client generator)
+ ```bash
+ # install as development dependency
+npm install orval -D 
+```

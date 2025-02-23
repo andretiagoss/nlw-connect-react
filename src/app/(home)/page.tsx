@@ -26,6 +26,7 @@ export default function Home() {
               AO VIVO
             </span>
           </div>
+
           <p className="text-gray-300 leading-relaxed text-sm md:text-base">
             Um evento feito por e para pessoas desenvolvedoras apaixonadas por
             criar soluções inovadoras e compartilhar conhecimento. Vamos
