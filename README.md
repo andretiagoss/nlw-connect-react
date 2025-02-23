@@ -3,7 +3,7 @@ This is a React with [Next.js](https://nextjs.org) project developed during Rock
 
 ## Getting Started
 
-### Prepare development environment:
+### Development environment setup:
 
 -  Install node version manager
 -  Install nodejs version 22
